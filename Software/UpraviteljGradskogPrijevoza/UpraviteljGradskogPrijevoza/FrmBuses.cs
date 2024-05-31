@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UpraviteljGradskogPrijevoza.Models;
+using UpraviteljGradskogPrijevoza.Repositories;
 
 
 namespace UpraviteljGradskogPrijevoza
@@ -16,7 +18,12 @@ namespace UpraviteljGradskogPrijevoza
         public FrmBuses()
         {
             InitializeComponent();
-            
+        }
+
+        private void FrmBuses_Load(object sender, EventArgs e)
+        {
+            List<Bus> buses = BusRepository.GetBuses();
+            dgvBuses.DataSource = buses;
         }
     }
 }

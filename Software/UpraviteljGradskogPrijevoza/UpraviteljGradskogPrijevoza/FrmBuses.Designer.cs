@@ -29,69 +29,71 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuses));
-            this.dgvAutobusi = new System.Windows.Forms.DataGridView();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.btnVozniRed = new System.Windows.Forms.Button();
+            this.dgvBuses = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDrivePlan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutobusi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuses)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvAutobusi
+            // dgvBuses
             // 
-            this.dgvAutobusi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvBuses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAutobusi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutobusi.Location = new System.Drawing.Point(12, 94);
-            this.dgvAutobusi.Name = "dgvAutobusi";
-            this.dgvAutobusi.Size = new System.Drawing.Size(776, 291);
-            this.dgvAutobusi.TabIndex = 0;
+            this.dgvBuses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBuses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuses.Location = new System.Drawing.Point(12, 94);
+            this.dgvBuses.Name = "dgvBuses";
+            this.dgvBuses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBuses.Size = new System.Drawing.Size(776, 291);
+            this.dgvBuses.TabIndex = 0;
             // 
-            // btnNovo
+            // btnAdd
             // 
-            this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovo.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnNovo.ForeColor = System.Drawing.Color.Purple;
-            this.btnNovo.Location = new System.Drawing.Point(634, 405);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(154, 33);
-            this.btnNovo.TabIndex = 1;
-            this.btnNovo.Text = "Dodaj novu stavku";
-            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Purple;
+            this.btnAdd.Location = new System.Drawing.Point(634, 405);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(154, 33);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Dodaj novu stavku";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // btnUredi
+            // btnEdit
             // 
-            this.btnUredi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUredi.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnUredi.FlatAppearance.BorderSize = 0;
-            this.btnUredi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUredi.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnUredi.ForeColor = System.Drawing.Color.Purple;
-            this.btnUredi.Location = new System.Drawing.Point(460, 405);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(154, 33);
-            this.btnUredi.TabIndex = 2;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = false;
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Purple;
+            this.btnEdit.Location = new System.Drawing.Point(460, 405);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(154, 33);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Uredi";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // btnVozniRed
+            // btnDrivePlan
             // 
-            this.btnVozniRed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVozniRed.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnVozniRed.FlatAppearance.BorderSize = 0;
-            this.btnVozniRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVozniRed.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnVozniRed.ForeColor = System.Drawing.Color.Purple;
-            this.btnVozniRed.Location = new System.Drawing.Point(626, 39);
-            this.btnVozniRed.Name = "btnVozniRed";
-            this.btnVozniRed.Size = new System.Drawing.Size(162, 33);
-            this.btnVozniRed.TabIndex = 3;
-            this.btnVozniRed.Text = "Otvori vozni red";
-            this.btnVozniRed.UseVisualStyleBackColor = false;
+            this.btnDrivePlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDrivePlan.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnDrivePlan.FlatAppearance.BorderSize = 0;
+            this.btnDrivePlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDrivePlan.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDrivePlan.ForeColor = System.Drawing.Color.Purple;
+            this.btnDrivePlan.Location = new System.Drawing.Point(626, 39);
+            this.btnDrivePlan.Name = "btnDrivePlan";
+            this.btnDrivePlan.Size = new System.Drawing.Size(162, 33);
+            this.btnDrivePlan.TabIndex = 3;
+            this.btnDrivePlan.Text = "Otvori vozni red";
+            this.btnDrivePlan.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -113,15 +115,16 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnVozniRed);
-            this.Controls.Add(this.btnUredi);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.dgvAutobusi);
+            this.Controls.Add(this.btnDrivePlan);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dgvBuses);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBuses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autobusi";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutobusi)).EndInit();
+            this.Load += new System.EventHandler(this.FrmBuses_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,10 +132,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvAutobusi;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnVozniRed;
+        private System.Windows.Forms.DataGridView dgvBuses;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDrivePlan;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UpraviteljGradskogPrijevoza.Models
 {
-    public class Autobus
+    public class Bus
     {
         public int ID { get; set; }
         public string Proizvodac { get; set; }

@@ -28,7 +28,6 @@ namespace UpraviteljGradskogPrijevoza
                 MessageBox.Show("Molimo unesite sve podatke!", "Prijava neuspješna", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (txtUsername.Text == Username && txtPassword.Text == Password)
             {
-  
                 FrmBuses frmBuses = new FrmBuses();
                 Hide();
                 frmBuses.ShowDialog();
