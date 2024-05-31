@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace UpraviteljGradskogPrijevoza
 {
     public partial class FrmBuses : Form
@@ -15,6 +16,7 @@ namespace UpraviteljGradskogPrijevoza
         public FrmBuses()
         {
             InitializeComponent();
+            
         }
     }
 }
