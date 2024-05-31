@@ -23,10 +23,15 @@ namespace UpraviteljGradskogPrijevoza
             if (txtUsername.Text == "" || txtPassword.Text == "")
                 MessageBox.Show("Molimo unesite sve podatke!", "Prijava neuspješna", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (txtUsername.Text == Username && txtPassword.Text == Password)
-                MessageBox.Show("Uspješno ste se prijavili", "Prijava uspješna", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                FrmBuses frmBuses = new FrmBuses();
+                Hide();
+                frmBuses.ShowDialog();
+                Close();
+            }
             else
                 MessageBox.Show("Korisničko ime ili lozinka su pogrešni!", "Prijava neuspješna", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                
         } 
     }
 }
