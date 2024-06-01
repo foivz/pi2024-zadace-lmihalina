@@ -63,7 +63,10 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Bus.cs" />
+    <Compile Include="Models\BusLine.cs" />
+    <Compile Include="Models\BusStation.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BusRepository.cs" />

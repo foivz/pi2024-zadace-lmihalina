@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace UpraviteljGradskogPrijevoza.Models
 {
-    public class Bus
+    public class BusLine
     {
         public int ID { get; set; }
-        public string Proizvodac { get; set; }
-        public string Registracija { get; set; }
-        public int VoznalinijaID { get; set; }
+        public string ImeLinije  { get; set; }
         public Employee Djelatnik { get; set; }
     }
 }

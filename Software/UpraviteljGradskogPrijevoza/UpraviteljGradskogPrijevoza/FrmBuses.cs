@@ -24,6 +24,7 @@ namespace UpraviteljGradskogPrijevoza
         {
             List<Bus> buses = BusRepository.GetBuses();
             dgvBuses.DataSource = buses;
+            dgvBuses.Columns["Djelatnik"].HeaderText = "Autor";
         }
 
         private void button1_Click(object sender, EventArgs e)

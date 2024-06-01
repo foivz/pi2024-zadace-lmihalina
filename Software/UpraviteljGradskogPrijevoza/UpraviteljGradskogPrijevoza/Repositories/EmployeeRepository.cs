@@ -12,15 +12,15 @@ namespace UpraviteljGradskogPrijevoza.Repositories
 {
     public class EmployeeRepository
     {
-        public static Employee GetEmployee(string username)
+        public static Employee GetEmployeeByUsername(string username)
         {
             string sql = $"SELECT * FROM Djelatnik WHERE KorisnickoIme='{username}'";
             return FetchEmployee(sql);
         }
 
-        public static Employee GetEmployee(int id)
+        public static Employee GetEmployeeByOIB(string OIB)
         {
-            string sql = $"SELECT * FROM Djelatnik WHERE OIB='{id}'";
+            string sql = $"SELECT * FROM Djelatnik WHERE OIB='{OIB}'";
             return FetchEmployee(sql);
         }
         private static Employee FetchEmployee(string sql)

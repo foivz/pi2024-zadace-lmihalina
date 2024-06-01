@@ -16,7 +16,9 @@ namespace UpraviteljGradskogPrijevoza
 {
     public partial class FrmLogin : Form
     {
-        Employee LoggedEmployee = new Employee();
+        Employee LoggedEmployee;
+        //isever - habz
+        //mhlad - zmof
 
         public FrmLogin()
         {
@@ -27,10 +29,11 @@ namespace UpraviteljGradskogPrijevoza
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
-            LoggedEmployee=EmployeeRepository.GetEmployee(txtUsername.Text);
+            LoggedEmployee=EmployeeRepository.GetEmployeeByUsername(txtUsername.Text);
 
             if (txtUsername.Text == "" || txtPassword.Text == "")
                 MessageBox.Show("Molimo unesite sve podatke!", "Prijava neuspješna", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             else if (LoggedEmployee!=null && LoggedEmployee.Lozinka==txtPassword.Text)
             {
                 FrmBuses frmBuses = new FrmBuses();

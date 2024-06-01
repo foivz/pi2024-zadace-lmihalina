@@ -70,7 +70,9 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             string proizvodac = reader["Proizvodac"].ToString();
             string registracija = reader["Registracija"].ToString();
             int.TryParse(reader["VoznaLinijaID"].ToString(), out int voznaLinijaID);
+            
             string djelatnikOIB = reader["DjelatnikOIB"].ToString();
+            var djelatnik = EmployeeRepository.GetEmployeeByOIB(djelatnikOIB);
 
             var bus = new Bus
             {
@@ -78,7 +80,7 @@ namespace UpraviteljGradskogPrijevoza.Repositories
                 Proizvodac = proizvodac,
                 Registracija = registracija,
                 VoznalinijaID = voznaLinijaID,
-                DjelatnikOIB=djelatnikOIB
+                Djelatnik=djelatnik
             };
 
             return bus;
