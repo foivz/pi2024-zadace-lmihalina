@@ -8,13 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UpraviteljGradskogPrijevoza.Models;
+using UpraviteljGradskogPrijevoza.Repositories;
 
 
 namespace UpraviteljGradskogPrijevoza
 {
     public partial class FrmLogin : Form
     {
-        string Username="a", Password="b";
+        Employee LoggedEmployee = new Employee();
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -24,9 +27,11 @@ namespace UpraviteljGradskogPrijevoza
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
+            LoggedEmployee=EmployeeRepository.GetEmployee(txtUsername.Text);
+
             if (txtUsername.Text == "" || txtPassword.Text == "")
                 MessageBox.Show("Molimo unesite sve podatke!", "Prijava neuspješna", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (txtUsername.Text == Username && txtPassword.Text == Password)
+            else if (LoggedEmployee!=null && LoggedEmployee.Lozinka==txtPassword.Text)
             {
                 FrmBuses frmBuses = new FrmBuses();
                 Hide();
