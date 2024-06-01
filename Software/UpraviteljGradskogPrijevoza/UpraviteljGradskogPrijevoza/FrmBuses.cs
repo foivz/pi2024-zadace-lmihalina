@@ -25,5 +25,24 @@ namespace UpraviteljGradskogPrijevoza
             List<Bus> buses = BusRepository.GetBuses();
             dgvBuses.DataSource = buses;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnCancel.Enabled = true;
+            btnCancel.BackColor= Color.Red;
+            string parametar = rdbManufacturer.Checked ? "Proizvodac" : "Registracija";
+            string keyword = txtSearchBuses.Text;
+            List<Bus> buses = BusRepository.SearchBuses(parametar, keyword);
+            dgvBuses.DataSource= buses;
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnCancel.Enabled= false;
+            btnCancel.BackColor = Color.Silver;
+            txtSearchBuses.Text="";
+            FrmBuses_Load(sender, e);
+        }
     }
 }

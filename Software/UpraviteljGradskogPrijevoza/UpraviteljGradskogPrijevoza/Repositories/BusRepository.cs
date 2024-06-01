@@ -46,6 +46,24 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             return buses;
         }
 
+        public static List<Bus> SearchBuses(string parametar, string keyword)
+        {
+            List<Bus> buses= new List<Bus>();
+            string sql = $"SELECT * FROM Autobusi WHERE {parametar} LIKE '%{keyword}%'"; 
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            while (reader.Read())
+            {
+                Bus bus = CreateObject(reader);
+                buses.Add(bus);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+            return buses;
+        }
+
         private static Bus CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["ID"].ToString());
