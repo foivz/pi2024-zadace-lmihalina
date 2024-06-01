@@ -12,5 +12,12 @@ namespace UpraviteljGradskogPrijevoza.Models
         public string Naselje { get; set; }
         public string Adresa { get; set; }
         public Employee Djelatnik { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Adresa}, {Naselje} ";
+        }
     }
+
+   
 }

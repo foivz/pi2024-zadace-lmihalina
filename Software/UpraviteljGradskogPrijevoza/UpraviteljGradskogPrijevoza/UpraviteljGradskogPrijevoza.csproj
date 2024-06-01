@@ -69,8 +69,11 @@
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BusLineRepository.cs" />
     <Compile Include="Repositories\BusRepository.cs" />
+    <Compile Include="Repositories\BusStationRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\ScheduleRepository.cs" />
     <EmbeddedResource Include="FrmBuses.resx">
       <DependentUpon>FrmBuses.cs</DependentUpon>
     </EmbeddedResource>

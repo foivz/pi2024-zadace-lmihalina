@@ -11,5 +11,10 @@ namespace UpraviteljGradskogPrijevoza.Models
         public int ID { get; set; }
         public string ImeLinije  { get; set; }
         public Employee Djelatnik { get; set; }
+
+        public override string ToString()
+        {
+            return ImeLinije;
+        }
     }
 }
