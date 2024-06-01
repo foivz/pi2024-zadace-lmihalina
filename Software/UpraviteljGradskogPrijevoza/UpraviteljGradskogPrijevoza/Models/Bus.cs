@@ -11,7 +11,7 @@ namespace UpraviteljGradskogPrijevoza.Models
         public int ID { get; set; }
         public string Proizvodac { get; set; }
         public string Registracija { get; set; }
-        public int VoznalinijaID { get; set; }
+        public BusLine Voznalinija { get; set; }
         public Employee Djelatnik { get; set; }
     }
 }

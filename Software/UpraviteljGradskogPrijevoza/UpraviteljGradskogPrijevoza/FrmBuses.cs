@@ -27,7 +27,7 @@ namespace UpraviteljGradskogPrijevoza
             dgvBuses.Columns["Djelatnik"].HeaderText = "Autor";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             btnCancel.Enabled = true;
             btnCancel.BackColor= Color.Red;
@@ -44,6 +44,23 @@ namespace UpraviteljGradskogPrijevoza
             btnCancel.BackColor = Color.Silver;
             txtSearchBuses.Text="";
             FrmBuses_Load(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Bus selectedBus = dgvBuses.CurrentRow.DataBoundItem as Bus;
+            if (selectedBus != null)
+            {
+                DialogResult result = MessageBox.Show
+                    ("Jeste li sigurni da želite obrisati odabrani autobus?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                
+                if (result == DialogResult.Yes)
+                {
+                    BusRepository.Delete(selectedBus.ID);
+                    FrmBuses_Load(sender, e);
+                }
+            }
+            else MessageBox.Show("Odaberite autobus koji želite obrisati!", "Brisanje neuspješno", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

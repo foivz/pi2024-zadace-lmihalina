@@ -64,12 +64,23 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             return buses;
         }
 
+        public static void Delete(int id)
+        {
+            string slq = $"DELETE FROM Autobusi WHERE ID='{id}'";
+            DB.OpenConnection();
+            DB.ExecuteCommand(slq);
+            DB.CloseConnection();
+        }
+
         private static Bus CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["ID"].ToString());
             string proizvodac = reader["Proizvodac"].ToString();
             string registracija = reader["Registracija"].ToString();
+
             int.TryParse(reader["VoznaLinijaID"].ToString(), out int voznaLinijaID);
+            var linija = BusLineRepository.GetBusLine(voznaLinijaID);
+             
             
             string djelatnikOIB = reader["DjelatnikOIB"].ToString();
             var djelatnik = EmployeeRepository.GetEmployeeByOIB(djelatnikOIB);
@@ -79,7 +90,7 @@ namespace UpraviteljGradskogPrijevoza.Repositories
                 ID = id,
                 Proizvodac = proizvodac,
                 Registracija = registracija,
-                VoznalinijaID = voznaLinijaID,
+                Voznalinija = linija,
                 Djelatnik=djelatnik
             };
 
