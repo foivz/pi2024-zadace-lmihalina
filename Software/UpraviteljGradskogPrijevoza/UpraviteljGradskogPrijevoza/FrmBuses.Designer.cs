@@ -72,6 +72,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Dodaj novu stavku";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -87,6 +88,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Uredi";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDrivePlan
             // 

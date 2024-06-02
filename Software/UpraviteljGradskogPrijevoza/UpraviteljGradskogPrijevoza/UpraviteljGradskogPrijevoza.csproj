@@ -56,6 +56,12 @@
     <Compile Include="FrmBuses.Designer.cs">
       <DependentUpon>FrmBuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditBuses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditBuses.Designer.cs">
+      <DependentUpon>FrmEditBuses.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Repositories\ScheduleRepository.cs" />
     <EmbeddedResource Include="FrmBuses.resx">
       <DependentUpon>FrmBuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditBuses.resx">
+      <DependentUpon>FrmEditBuses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

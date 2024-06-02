@@ -62,5 +62,18 @@ namespace UpraviteljGradskogPrijevoza
             }
             else MessageBox.Show("Odaberite autobus koji želite obrisati!", "Brisanje neuspješno", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Bus selectedBus = dgvBuses.CurrentRow.DataBoundItem as Bus;
+            FrmEditBuses frmEditBuses = new FrmEditBuses(selectedBus); 
+            frmEditBuses.ShowDialog();    
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmEditBuses frmEditBuses = new FrmEditBuses(null);
+            frmEditBuses.ShowDialog();
+        }
     }
 }

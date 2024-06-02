@@ -16,7 +16,7 @@ namespace UpraviteljGradskogPrijevoza
 {
     public partial class FrmLogin : Form
     {
-        Employee LoggedEmployee;
+        public static Employee LoggedEmployee;
         //isever - habz
         //mhlad - zmof
 

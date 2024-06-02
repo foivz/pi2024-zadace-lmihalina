@@ -39,6 +39,25 @@ namespace UpraviteljGradskogPrijevoza.Repositories
 
         }
 
+    public static List<Employee> GetEmployees()
+        {
+            List<Employee> employees = new List<Employee>();
+
+            string sql = $"SELECT * FROM Djelatnik";
+            DB.OpenConnection();
+            var reader=DB.GetDataReader(sql);
+
+            while(reader.Read())
+            {
+                Employee employee = CreateObject(reader);
+                employees.Add(employee);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+            return employees;
+        }
+
         private static Employee CreateObject(SqlDataReader reader)
         {
             string oib = reader["OIB"].ToString();
