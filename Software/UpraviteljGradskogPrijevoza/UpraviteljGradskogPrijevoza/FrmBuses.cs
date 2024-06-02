@@ -20,7 +20,7 @@ namespace UpraviteljGradskogPrijevoza
             InitializeComponent();
         }
 
-        private void FrmBuses_Load(object sender, EventArgs e)
+        public void FrmBuses_Load(object sender, EventArgs e)
         {
             List<Bus> buses = BusRepository.GetBuses();
             dgvBuses.DataSource = buses;
@@ -67,13 +67,15 @@ namespace UpraviteljGradskogPrijevoza
         {
             Bus selectedBus = dgvBuses.CurrentRow.DataBoundItem as Bus;
             FrmEditBuses frmEditBuses = new FrmEditBuses(selectedBus); 
-            frmEditBuses.ShowDialog();    
+            frmEditBuses.ShowDialog();
+            FrmBuses_Load(sender, e);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FrmEditBuses frmEditBuses = new FrmEditBuses(null);
             frmEditBuses.ShowDialog();
+            FrmBuses_Load(sender, e);
         }
     }
 }

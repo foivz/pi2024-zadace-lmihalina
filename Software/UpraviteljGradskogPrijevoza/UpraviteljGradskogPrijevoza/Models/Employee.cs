@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UpraviteljGradskogPrijevoza.Repositories;
 
 namespace UpraviteljGradskogPrijevoza.Models
 {
@@ -17,8 +18,10 @@ namespace UpraviteljGradskogPrijevoza.Models
 
         public override string ToString()
         {
-            string manager = IsManager=="True"? "Menadžer" : "Računalni operater";
-            return $"{Ime} {Prezime}({manager})";
+
+            return KorisnickoIme;
         }
+
+     
     }
 }

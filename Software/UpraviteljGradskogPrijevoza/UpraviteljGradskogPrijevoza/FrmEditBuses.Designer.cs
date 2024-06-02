@@ -39,8 +39,8 @@
             this.txtManufacturer = new System.Windows.Forms.TextBox();
             this.txtRegistration = new System.Windows.Forms.TextBox();
             this.cboBusLine = new System.Windows.Forms.ComboBox();
-            this.cboEmployee = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtEmployee = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -92,6 +92,7 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
@@ -176,18 +177,6 @@
             this.cboBusLine.Size = new System.Drawing.Size(177, 21);
             this.cboBusLine.TabIndex = 13;
             // 
-            // cboEmployee
-            // 
-            this.cboEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboEmployee.Enabled = false;
-            this.cboEmployee.FormattingEnabled = true;
-            this.cboEmployee.Location = new System.Drawing.Point(765, 162);
-            this.cboEmployee.Name = "cboEmployee";
-            this.cboEmployee.Size = new System.Drawing.Size(177, 21);
-            this.cboEmployee.TabIndex = 14;
-            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Red;
@@ -200,6 +189,15 @@
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtEmployee
+            // 
+            this.txtEmployee.Location = new System.Drawing.Point(754, 163);
+            this.txtEmployee.Name = "txtEmployee";
+            this.txtEmployee.ReadOnly = true;
+            this.txtEmployee.Size = new System.Drawing.Size(188, 20);
+            this.txtEmployee.TabIndex = 16;
             // 
             // FrmEditBuses
             // 
@@ -207,8 +205,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(954, 346);
+            this.Controls.Add(this.txtEmployee);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.cboEmployee);
             this.Controls.Add(this.cboBusLine);
             this.Controls.Add(this.txtRegistration);
             this.Controls.Add(this.txtManufacturer);
@@ -246,7 +244,7 @@
         private System.Windows.Forms.TextBox txtManufacturer;
         private System.Windows.Forms.TextBox txtRegistration;
         private System.Windows.Forms.ComboBox cboBusLine;
-        private System.Windows.Forms.ComboBox cboEmployee;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtEmployee;
     }
 }

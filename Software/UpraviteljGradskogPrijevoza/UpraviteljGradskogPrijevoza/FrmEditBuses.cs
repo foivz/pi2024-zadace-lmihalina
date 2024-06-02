@@ -24,7 +24,8 @@ namespace UpraviteljGradskogPrijevoza
         private void FrmEditBuses_Load(object sender, EventArgs e)
         {
             cboBusLine.DataSource = BusLineRepository.GetBusLines();
-            cboEmployee.Text = FrmLogin.LoggedEmployee.ToString();
+            txtEmployee.Text=FrmLogin.LoggedEmployee.ToString();
+            
             if (bus == null)
             {
                 lblHeader.Text = "Dodaj novi autobus";
@@ -38,6 +39,39 @@ namespace UpraviteljGradskogPrijevoza
             }
 
             
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(bus == null)
+            {
+                Bus newBus= new Bus();
+                newBus.ID =int.Parse(txtID.Text);
+                newBus.Proizvodac=txtManufacturer.Text;
+                newBus.Registracija=txtRegistration.Text;
+                newBus.Voznalinija=cboBusLine.SelectedItem as BusLine;
+                newBus.Djelatnik=EmployeeRepository.GetEmployeeByUsername(txtEmployee.Text);
+                BusRepository.Insert(newBus);
+                Close();
+                
+            }
+
+            else
+            {
+                Bus newBus= new Bus();
+                newBus.ID = int.Parse(txtID.Text);
+                newBus.Proizvodac = txtManufacturer.Text;
+                newBus.Registracija = txtRegistration.Text;
+                newBus.Voznalinija = cboBusLine.SelectedItem as BusLine;
+                newBus.Djelatnik = EmployeeRepository.GetEmployeeByUsername(txtEmployee.Text);
+                BusRepository.Update(newBus,bus);
+                Close();
+            }
         }
     }
 }

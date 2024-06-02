@@ -72,6 +72,24 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             DB.CloseConnection();
         }
 
+       public static void Insert(Bus bus)
+        {
+            string sql = $"INSERT INTO Autobusi (ID, Proizvodac, Registracija, VoznaLinijaID, DjelatnikOIB) VALUES " +
+                $"({bus.ID}, '{bus.Proizvodac}', '{bus.Registracija}', {bus.Voznalinija.ID}, '{bus.Djelatnik.OIB}');";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void Update(Bus newbus,Bus bus)
+        {
+            string sql = $"UPDATE Autobusi SET ID={newbus.ID}, Proizvodac='{newbus.Proizvodac}', Registracija = '{newbus.Registracija}', " +
+                $"VoznaLinijaID={newbus.Voznalinija.ID}, DjelatnikOIB='{newbus.Djelatnik.OIB}' WHERE ID={bus.ID}";
+            DB.OpenConnection();
+            DB.ExecuteCommand (sql);
+            DB.CloseConnection();
+        }
+
         private static Bus CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["ID"].ToString());
