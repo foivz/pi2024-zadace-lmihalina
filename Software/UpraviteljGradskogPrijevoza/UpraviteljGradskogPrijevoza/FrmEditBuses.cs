@@ -29,6 +29,7 @@ namespace UpraviteljGradskogPrijevoza
             if (bus == null)
             {
                 lblHeader.Text = "Dodaj novi autobus";
+                this.Text = lblHeader.Text;
             }
             else
             {
@@ -37,8 +38,8 @@ namespace UpraviteljGradskogPrijevoza
                 txtManufacturer.Text=bus.Proizvodac.ToString();
                 txtRegistration.Text=bus.Registracija.ToString();
             }
+            this.Text = lblHeader.Text;
 
-            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

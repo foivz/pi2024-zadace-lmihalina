@@ -62,6 +62,12 @@
     <Compile Include="FrmEditBuses.Designer.cs">
       <DependentUpon>FrmEditBuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditSchedule.Designer.cs">
+      <DependentUpon>FrmEditSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditBuses.resx">
       <DependentUpon>FrmEditBuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditSchedule.resx">
+      <DependentUpon>FrmEditSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

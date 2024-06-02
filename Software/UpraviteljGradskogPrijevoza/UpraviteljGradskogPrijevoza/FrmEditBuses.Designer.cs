@@ -224,7 +224,7 @@
             this.MinimumSize = new System.Drawing.Size(864, 323);
             this.Name = "FrmEditBuses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditBuses";
+            this.Text = "Uredi Autobuse";
             this.Load += new System.EventHandler(this.FrmEditBuses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

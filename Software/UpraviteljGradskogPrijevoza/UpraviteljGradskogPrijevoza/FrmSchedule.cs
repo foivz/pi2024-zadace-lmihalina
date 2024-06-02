@@ -46,6 +46,20 @@ namespace UpraviteljGradskogPrijevoza
             }
             else MessageBox.Show("Odaberite instancu vozne linije koju želite obrisati!", "Brisanje neuspješno", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Schedule selectedSchedule = dgvSchedules.CurrentRow.DataBoundItem as Schedule;
+            FrmEditSchedule frmEditSchedule = new FrmEditSchedule(selectedSchedule);
+            frmEditSchedule.ShowDialog();
+            FrmSchedule_Load(sender, e);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmEditSchedule frmEditSchedule = new FrmEditSchedule(null);
+            frmEditSchedule.ShowDialog();
+            FrmSchedule_Load(sender, e);
+        }
     }
 }

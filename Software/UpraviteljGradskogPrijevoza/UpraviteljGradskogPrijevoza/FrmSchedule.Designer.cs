@@ -164,6 +164,7 @@
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Uredi";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -178,6 +179,7 @@
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Dodaj novu stavku";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnBuses
             // 
