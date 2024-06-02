@@ -45,6 +45,14 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             return schedules;
         }
 
+        public static void Delete(int idLinija, int idStanica)
+        {
+            string sql = $"DELETE FROM VozniRed WHERE VoznaLinijaID={idLinija} AND AutobusnaStanicaID={idStanica}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
         private static Schedule CreateObject(SqlDataReader reader)
         {
             int linijaID = int.Parse(reader["VoznaLinijaID"].ToString());

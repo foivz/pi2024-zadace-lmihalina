@@ -149,6 +149,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
