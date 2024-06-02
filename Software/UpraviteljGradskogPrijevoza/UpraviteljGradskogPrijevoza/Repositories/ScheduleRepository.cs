@@ -53,6 +53,14 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             DB.CloseConnection();
         }
 
+        public static void Insert(Schedule schedule)
+        {
+            string sql = $"INSERT INTO VozniRed (VoznaLinijaID,AutobusnaStanicaID,DjelatnikOIB) VALUES ({schedule.VoznaLinija.ID},{schedule.AutobusnaStanica.ID},'{schedule.Djelatnik.OIB}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection() ;
+        }
+
         private static Schedule CreateObject(SqlDataReader reader)
         {
             int linijaID = int.Parse(reader["VoznaLinijaID"].ToString());
@@ -74,6 +82,13 @@ namespace UpraviteljGradskogPrijevoza.Repositories
             return schedule;
         }
 
-        
+        internal static void Update(Schedule newSchedule, Schedule schedule)
+        {
+            string sql = $"UPDATE VozniRed SET VoznaLinijaID={newSchedule.VoznaLinija.ID}, AutobusnaStanicaID={newSchedule.AutobusnaStanica.ID}, " +
+                $"DjelatnikOIB='{newSchedule.Djelatnik.OIB}' WHERE VoznaLinijaID={schedule.VoznaLinija.ID} AND AutobusnaStanicaID={schedule.AutobusnaStanica.ID}";
+            DB.OpenConnection() ;
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditSchedule));
+            this.lblHeader = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,16 +40,16 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sylfaen", 15.75F);
-            this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(258, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Uredi Vozni red";
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Sylfaen", 15.75F);
+            this.lblHeader.ForeColor = System.Drawing.Color.Purple;
+            this.lblHeader.Location = new System.Drawing.Point(258, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(154, 27);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Uredi Vozni red";
             // 
             // label2
             // 
@@ -115,6 +116,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -128,6 +130,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmEditSchedule
             // 
@@ -143,7 +146,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHeader);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmEditSchedule";
@@ -156,7 +160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

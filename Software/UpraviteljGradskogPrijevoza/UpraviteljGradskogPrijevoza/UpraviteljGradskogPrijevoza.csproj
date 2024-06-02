@@ -115,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,7 +132,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="References\DBLayer.dll" />
+    <Content Include="DLLs\DBLayer.dll" />
+    <None Include="Resources\1490886335-17-scholl-bus_82464.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

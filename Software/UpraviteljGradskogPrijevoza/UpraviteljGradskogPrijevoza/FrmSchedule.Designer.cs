@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSchedule));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rdbBusLine = new System.Windows.Forms.RadioButton();
-            this.rdbBusStation = new System.Windows.Forms.RadioButton();
-            this.txtSearchSchedule = new System.Windows.Forms.TextBox();
             this.dgvSchedules = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -56,47 +51,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vozni red";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(12, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Pretraži po:";
-            // 
-            // rdbBusLine
-            // 
-            this.rdbBusLine.AutoSize = true;
-            this.rdbBusLine.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbBusLine.Location = new System.Drawing.Point(109, 54);
-            this.rdbBusLine.Name = "rdbBusLine";
-            this.rdbBusLine.Size = new System.Drawing.Size(90, 22);
-            this.rdbBusLine.TabIndex = 2;
-            this.rdbBusLine.TabStop = true;
-            this.rdbBusLine.Text = "Vozna linija";
-            this.rdbBusLine.UseVisualStyleBackColor = true;
-            // 
-            // rdbBusStation
-            // 
-            this.rdbBusStation.AutoSize = true;
-            this.rdbBusStation.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbBusStation.Location = new System.Drawing.Point(205, 54);
-            this.rdbBusStation.Name = "rdbBusStation";
-            this.rdbBusStation.Size = new System.Drawing.Size(123, 22);
-            this.rdbBusStation.TabIndex = 3;
-            this.rdbBusStation.TabStop = true;
-            this.rdbBusStation.Text = "Autobusna stanica";
-            this.rdbBusStation.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchSchedule
-            // 
-            this.txtSearchSchedule.Location = new System.Drawing.Point(334, 56);
-            this.txtSearchSchedule.Name = "txtSearchSchedule";
-            this.txtSearchSchedule.Size = new System.Drawing.Size(134, 20);
-            this.txtSearchSchedule.TabIndex = 4;
-            // 
             // dgvSchedules
             // 
             this.dgvSchedules.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -110,31 +64,6 @@
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSchedules.Size = new System.Drawing.Size(998, 341);
             this.dgvSchedules.TabIndex = 5;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.Purple;
-            this.btnSearch.Location = new System.Drawing.Point(489, 56);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Pretraži";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Silver;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(580, 56);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Poništi";
-            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -184,10 +113,11 @@
             // btnBuses
             // 
             this.btnBuses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuses.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnBuses.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnBuses.FlatAppearance.BorderSize = 0;
             this.btnBuses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuses.Font = new System.Drawing.Font("Sylfaen", 11.25F);
+            this.btnBuses.ForeColor = System.Drawing.Color.Purple;
             this.btnBuses.Location = new System.Drawing.Point(856, 48);
             this.btnBuses.Name = "btnBuses";
             this.btnBuses.Size = new System.Drawing.Size(154, 33);
@@ -206,14 +136,9 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvSchedules);
-            this.Controls.Add(this.txtSearchSchedule);
-            this.Controls.Add(this.rdbBusStation);
-            this.Controls.Add(this.rdbBusLine);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(836, 329);
             this.Name = "FrmSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -228,13 +153,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rdbBusLine;
-        private System.Windows.Forms.RadioButton rdbBusStation;
-        private System.Windows.Forms.TextBox txtSearchSchedule;
         private System.Windows.Forms.DataGridView dgvSchedules;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
