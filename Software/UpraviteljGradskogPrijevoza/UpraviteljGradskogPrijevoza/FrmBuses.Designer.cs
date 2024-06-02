@@ -32,7 +32,7 @@
             this.dgvBuses = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDrivePlan = new System.Windows.Forms.Button();
+            this.btnSchedules = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rdbManufacturer = new System.Windows.Forms.RadioButton();
@@ -90,20 +90,21 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDrivePlan
+            // btnSchedules
             // 
-            this.btnDrivePlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDrivePlan.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDrivePlan.FlatAppearance.BorderSize = 0;
-            this.btnDrivePlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDrivePlan.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDrivePlan.ForeColor = System.Drawing.Color.Purple;
-            this.btnDrivePlan.Location = new System.Drawing.Point(848, 47);
-            this.btnDrivePlan.Name = "btnDrivePlan";
-            this.btnDrivePlan.Size = new System.Drawing.Size(162, 33);
-            this.btnDrivePlan.TabIndex = 3;
-            this.btnDrivePlan.Text = "Otvori vozni red";
-            this.btnDrivePlan.UseVisualStyleBackColor = false;
+            this.btnSchedules.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSchedules.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSchedules.FlatAppearance.BorderSize = 0;
+            this.btnSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedules.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSchedules.ForeColor = System.Drawing.Color.Purple;
+            this.btnSchedules.Location = new System.Drawing.Point(848, 47);
+            this.btnSchedules.Name = "btnSchedules";
+            this.btnSchedules.Size = new System.Drawing.Size(162, 33);
+            this.btnSchedules.TabIndex = 3;
+            this.btnSchedules.Text = "Otvori vozni red";
+            this.btnSchedules.UseVisualStyleBackColor = false;
+            this.btnSchedules.Click += new System.EventHandler(this.btnDrivePlan_Click);
             // 
             // label1
             // 
@@ -218,7 +219,7 @@
             this.Controls.Add(this.rdbManufacturer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDrivePlan);
+            this.Controls.Add(this.btnSchedules);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvBuses);
@@ -239,7 +240,7 @@
         private System.Windows.Forms.DataGridView dgvBuses;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDrivePlan;
+        private System.Windows.Forms.Button btnSchedules;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rdbManufacturer;

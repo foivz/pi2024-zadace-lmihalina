@@ -70,18 +70,24 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(185, 145);
+            this.btnLogin.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Purple;
+            this.btnLogin.Location = new System.Drawing.Point(177, 143);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(117, 31);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Prijava";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(482, 230);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);

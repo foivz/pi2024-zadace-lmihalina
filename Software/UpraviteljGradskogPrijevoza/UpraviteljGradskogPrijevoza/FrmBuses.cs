@@ -77,5 +77,13 @@ namespace UpraviteljGradskogPrijevoza
             frmEditBuses.ShowDialog();
             FrmBuses_Load(sender, e);
         }
+
+        private void btnDrivePlan_Click(object sender, EventArgs e)
+        {
+            FrmSchedule frmSchedule = new FrmSchedule();
+            Hide();
+            frmSchedule.ShowDialog();  
+            Show();
+        }
     }
 }
