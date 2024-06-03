@@ -6,6 +6,12 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Leonardo Mihalina | lmihalinaa@foi.hr | 0016161895 | lmihalina
 
+Podaci za prijavu u aplikaciju Upravitelj gradskog prijevoza:
+username1: isever
+pass1: habz
+
+username2: mhlad
+pass2: zmof
 
 ## Opis domene
 Gradskim prijevozom svakodnevno putuje velik broj putnika koji se na njega oslanjaju te kojima je često to to i jedini način kako doći do svoje destinacije. Stoga je ključno da kvaliteta usluge Autobusnog kolodvora Varaždin bude na visokoj razini. Jedna od najznačajnijih faktora koji utječu na kvalitetu poslovanja je upravo samo vođenje poslovanja koje se trenutno vodi na papiru. Takav način vođenja poslovanja donosi određene nedostatke, primjerice dugotrajnost i monotonost vođenja poslovanja odnosno unosa podataka, nedostatak izvještaja o poslovanju, pristupanje podacima moguće je samo u uredu u kojem se nalaze papiri s podacima, stvaranje gužve radi kupovine karata i nemogućnost putnika da pregledno vide vozni red. Zbog navedenih nedostataka zaposlenici su odlučili digitalizirati svoje poslovanje te naručili softver Bus Station Manager koji će im to omogućiti. 
